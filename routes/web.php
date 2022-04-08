@@ -33,6 +33,9 @@ Route::get('/', [DashboardController::class,'index'])->middleware('auth');
 //Siswa
 Route::get('/siswa', [SiswaController::class,'index'])->middleware('auth');
 Route::get('/tambahsiswa', [SiswaController::class,'tambahsiswa'])->middleware('auth');
+Route::post('/registersiswa', [SiswaController::class,'register'])->middleware('auth');
+Route::post('/siswa/delete', [SiswaController::class,'delete'])->middleware('auth');
+Route::post('/siswa/gantipassword', [SiswaController::class,'gantipassword'])->middleware('auth');
 
 
 Route::get('/dash', function () {
