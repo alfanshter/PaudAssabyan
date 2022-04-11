@@ -14,12 +14,12 @@
           <div class="">
             <div class="card-body retangle3">
               <ul>
-                <a href="#">
+                <a href="/jadwalkegiatan">
                 <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0 retangle3" >
                   <div class="">
                     <img src= 
                   <div class="">
-                    <h6 class="mb-0 text-sm">Data Semua Siswa</h6>
+                    <h6 class="mb-0 text-sm">Jadwal Kegiatan Siswa</h6>
                   </div>
                 </li>
                 </a>
@@ -119,7 +119,7 @@
           <div class="">
             <div class="card-body retangle3">
             <ul>
-              <a href="#">
+              <a href="/biodata">
                 <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0 retangle3">
                   <div class="">
                     <img src="../assets/img/illustrations/biodata_siswa.png" alt="kal" class="border-radius-lg shadow">

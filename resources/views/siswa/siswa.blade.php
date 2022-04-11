@@ -40,19 +40,22 @@
             <table class="table align-items-center mb-0">
             <thead>
                 <tr  class="border-radius-lg" style="background-color:#b0c4ee;">
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder ">No</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center">No</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder  ps-2 text-center">Nama</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder  ps-2">Kelas</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder  ps-2">Aksi</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder  ps-2 text-center" >Kelas</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder  ps-2 text-center" >Aksi</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($siswa as $data)
                 <tr>
-                <td class="text-left">1</td>
-                <td class="text-left">Jevri Afriliando</td>
-                <td class="text-left">A</td>
-                <td class="text-left">Baik</td>
-                </tr>
+                    <td class="text-center">{{$loop->iteration}}</td>
+                    <td class="text-center">{{$data->username}}</td>
+                    <td class="text-center">{{$data->kelas}}</td>
+                    <td class="text-center">{{$data->aksi}}</td>
+                    </tr>
+                        
+                @endforeach
             </tbody>
             </table>
         </div>

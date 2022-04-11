@@ -11,7 +11,8 @@ class SiswaController extends Controller
 {
     public function index()
     {
-        return view('siswa.siswa');
+        $data = User::where('role',1)->get();
+        return view('siswa.siswa',['siswa'=>$data]);
     }
 
     public function tambahsiswa()
@@ -66,6 +67,7 @@ class SiswaController extends Controller
         $validatedData = $request->validate([
             'username' => ['required','min:3','max:255','unique:users'],
             'password' => ['required','min:5'],
+            'nama' => ['required'],
             'password_ulang' => ['required','min:5'],
             'foto' => 'image|file|max:1024'
         ]);

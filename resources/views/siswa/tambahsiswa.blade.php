@@ -156,7 +156,7 @@
         </div>
         <div class="card-body px-0 pb-2">
         <div class="row table-responsive p-0" style="margin-left: 20px;margin-right: 20px;">
-            <table class="table align-items-center mb-0">
+            <table class="table align-items-center mb-0" id="dataTable">
             <thead>
                 <tr  class="border-radius-lg" style="background-color:#b0c4ee;">
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder  text-center">Tanggal</th>
@@ -188,7 +188,12 @@
             <div class="modal-body">
                 <form action="/registersiswa" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="mb-3">
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nama Siswa:</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Siswa" name="nama" required style="background-color: #B6BDFF" id="recipient-name">
+                  </div>
+
+                  <div class="mb-3">
                     <label for="recipient-name" class="col-form-label">Buat Username:</label>
                     <input type="text" class="form-control" placeholder="Masukkan Username" name="username" required style="background-color: #B6BDFF" id="recipient-name">
                   </div>

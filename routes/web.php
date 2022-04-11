@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BiodataSiswaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JadwalkegiatanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SiswaController;
@@ -37,6 +39,18 @@ Route::post('/registersiswa', [SiswaController::class,'register'])->middleware('
 Route::post('/siswa/delete', [SiswaController::class,'delete'])->middleware('auth');
 Route::post('/siswa/gantipassword', [SiswaController::class,'gantipassword'])->middleware('auth');
 
+//Siswa
+Route::get('/jadwalkegiatan', [JadwalkegiatanController::class,'index'])->middleware('auth');
+Route::post('/jadwalkegiatan', [JadwalkegiatanController::class,'store'])->middleware('auth');
+Route::post('/jadwalkegiatan/update', [JadwalkegiatanController::class,'update'])->middleware('auth');
+Route::post('/jadwalkegiatan/hapus', [JadwalkegiatanController::class,'destroy'])->middleware('auth');
+
+//Biodata
+Route::get('/biodata', [BiodataSiswaController::class,'index'])->middleware('auth');
+Route::get('/biodata/{id}', [BiodataSiswaController::class,'edit'])->middleware('auth');
+Route::post('/biodata', [BiodataSiswaController::class,'store'])->middleware('auth');
+Route::post('/biodata/update', [BiodataSiswaController::class,'update'])->middleware('auth');
+Route::post('/biodata/hapus', [BiodataSiswaController::class,'delete'])->middleware('auth');
 
 Route::get('/dash', function () {
     return view('dash');
