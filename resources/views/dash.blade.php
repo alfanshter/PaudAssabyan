@@ -46,7 +46,7 @@
           <div class="">
             <div class="card-body retangle3">
             <ul>
-              <a href="/absensi">
+              <a href="/absensiswa">
                 <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0 retangle3">
                   <div class="">
                     <img src="../assets/img/illustrations/absensi_siswa.png" alt="kal" class="border-radius-lg shadow">

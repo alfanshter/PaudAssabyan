@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(BiodataSiswa::class);
     }
+
+    public function absen()
+    {
+        return $this->hasOne(AbsenSiswa::class);
+    }
 }

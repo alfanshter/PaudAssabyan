@@ -211,8 +211,9 @@
                   <center>
                     <div>
                         <img class="img-preview img-fluid" src="{{asset('assets/img/siswa/imgfoto.svg')}}" width="200px" width="200px">
-                        <label for="foto"  class="d-block btn-primary mt-2 w-100">Pilih Foto</label>
-                        <input name="foto" id="foto" type="file" required id="foto" style="visibility:hidden;"  onchange="previewImage()">
+                        {{-- <label for="foto"  class="d-block btn-primary mt-2 w-100">Pilih Foto</label> --}}
+                        {{-- <input name="foto" id="foto" type="file" required id="foto" style="visibility:hidden;"  onchange="previewImage()"> --}}
+                        <input name="foto" id="foto" type="file" required id="foto"   onchange="previewImage()">
                         <script>
                             function previewImage(){
                                 const  image = document.querySelector('#foto');

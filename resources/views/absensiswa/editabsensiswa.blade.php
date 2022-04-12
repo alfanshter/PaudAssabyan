@@ -129,6 +129,11 @@
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Edit</button>                  
                     </div>
+{{--                   
+                        <div>
+                            <button class="d-inline btn"  style="background-color: #FF0707">Close</button>
+                            <button class="d-inline btn" type="submit" style="background-color: #DA2FE9">Simpan Edit</button>
+                        </div>     --}}
 
                 </form>
 

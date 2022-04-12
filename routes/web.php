@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AbsenSiswaController;
 use App\Http\Controllers\BiodataSiswaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JadwalkegiatanController;
@@ -51,6 +52,13 @@ Route::get('/biodata/{id}', [BiodataSiswaController::class,'edit'])->middleware(
 Route::post('/biodata', [BiodataSiswaController::class,'store'])->middleware('auth');
 Route::post('/biodata/update', [BiodataSiswaController::class,'update'])->middleware('auth');
 Route::post('/biodata/hapus', [BiodataSiswaController::class,'delete'])->middleware('auth');
+
+
+//Absen Siswa
+Route::get('/absensiswa', [AbsenSiswaController::class,'index'])->middleware('auth');
+Route::post('/absensiswa', [AbsenSiswaController::class,'store'])->middleware('auth');
+Route::post('/absensiswa/update', [AbsenSiswaController::class,'update'])->middleware('auth');
+Route::post('/absensiswa/hapus', [AbsenSiswaController::class,'delete'])->middleware('auth');
 
 Route::get('/dash', function () {
     return view('dash');
