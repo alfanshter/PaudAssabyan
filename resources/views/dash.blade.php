@@ -66,7 +66,7 @@
           <div class="">
             <div class="card-body retangle3">
               <ul>
-              <a href="/nilaisiswa">
+              <a href="/nilai">
                 <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0 retangle3">
                   <div class="s">
                     <img src="../assets/img/illustrations/nilai_siswa.png" alt="kal" class="border-radius-lg shadow">
@@ -137,7 +137,7 @@
           <div class="">
             <div class="card-body retangle3">
             <ul>
-            <a href="#">
+            <a href="/guru">
                 <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0 retangle3">
                   <div class="">
                     <img src="../assets/img/illustrations/nama_guru.png" alt="kal" class="border-radius-lg shadow">

@@ -3,8 +3,11 @@
 use App\Http\Controllers\AbsenSiswaController;
 use App\Http\Controllers\BiodataSiswaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\JadwalkegiatanController;
+use App\Http\Controllers\KegiatanLuarPaudController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\UsersController;
@@ -40,7 +43,7 @@ Route::post('/registersiswa', [SiswaController::class,'register'])->middleware('
 Route::post('/siswa/delete', [SiswaController::class,'delete'])->middleware('auth');
 Route::post('/siswa/gantipassword', [SiswaController::class,'gantipassword'])->middleware('auth');
 
-//Siswa
+//Kegiatan
 Route::get('/jadwalkegiatan', [JadwalkegiatanController::class,'index'])->middleware('auth');
 Route::post('/jadwalkegiatan', [JadwalkegiatanController::class,'store'])->middleware('auth');
 Route::post('/jadwalkegiatan/update', [JadwalkegiatanController::class,'update'])->middleware('auth');
@@ -59,6 +62,22 @@ Route::get('/absensiswa', [AbsenSiswaController::class,'index'])->middleware('au
 Route::post('/absensiswa', [AbsenSiswaController::class,'store'])->middleware('auth');
 Route::post('/absensiswa/update', [AbsenSiswaController::class,'update'])->middleware('auth');
 Route::post('/absensiswa/hapus', [AbsenSiswaController::class,'delete'])->middleware('auth');
+
+//Nilai Siswa
+Route::get('/nilai', [NilaiController::class,'index'])->middleware('auth');
+
+//Kegiatan
+Route::get('/kegiatanluarpaud', [KegiatanLuarPaudController::class,'index'])->middleware('auth');
+Route::post('/kegiatanluarpaud', [KegiatanLuarPaudController::class,'store'])->middleware('auth');
+Route::post('/kegiatanluarpaud/update', [KegiatanLuarPaudController::class,'update'])->middleware('auth');
+Route::post('/kegiatanluarpaud/delete', [KegiatanLuarPaudController::class,'delete'])->middleware('auth');
+
+//Guru
+Route::get('/guru', [GuruController::class,'index'])->middleware('auth');
+Route::post('/guru', [GuruController::class,'store'])->middleware('auth');
+Route::post('/guru/update', [GuruController::class,'update'])->middleware('auth');
+Route::post('/guru/delete', [GuruController::class,'delete'])->middleware('auth');
+
 
 Route::get('/dash', function () {
     return view('dash');

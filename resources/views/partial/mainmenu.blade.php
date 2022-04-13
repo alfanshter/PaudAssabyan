@@ -8,7 +8,7 @@
               @if (auth()->user()->role == 0)
               <a href="#"><img src="../assets/img/menu/imgfasilitas.svg" alt="fasilitas" width="40" height="40">Fasilitas Paud Assibyan</a>
               <a href="/visimisi"><img src="../assets/img/menu/imgvisimisi.svg" alt="Visi-Misi" width="40" height="40">Visi Misi Paud Assibyan</a>
-              <a href="#"><img src="../assets/img/menu/imgkegiatan.svg" alt="Kegiatan" width="40" height="40">Kegiatan Luar Paud</a>
+              <a href="/kegiatanluarpaud"><img src="../assets/img/menu/imgkegiatan.svg" alt="Kegiatan" width="40" height="40">Kegiatan Luar Paud</a>
               <a href="/tambahsiswa"><img src="../assets/img/illustrations/imgprofil.svg" alt="Kegiatan" width="40" height="40"> Buat Akun Siswa</a>
               <a href="/siswa"><img src="../assets/img/illustrations/imganggotasiswa.svg"  width="40" height="40"> Anggota Siswa</a>
               @endif
