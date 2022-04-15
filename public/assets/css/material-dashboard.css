@@ -4,7 +4,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+ :root {
   --bs-blue: #63B3ED;
   --bs-indigo: #596CFF;
   --bs-purple: #6f42c1;
@@ -2725,6 +2725,10 @@ progress {
   cursor: pointer;
 }
 
+th{
+  border-right: 1px solid black;
+}
+
 .form-control:focus {
   color: #495057;
   background-color: transparent;
@@ -2733,12 +2737,20 @@ progress {
   box-shadow: none;
 }
 
+.mobileforminput{
+  outline: 0;
+  border-width: 0 0 3px;
+  border-color: rgb(26, 26, 26);
+  max-width: 100%;
+  color: #495057;
+}
+
 .form-control::-webkit-date-and-time-value {
   height: 1.5rem;
 }
 
 .form-control::placeholder {
-  color: #adb5bd;
+  color: #252525;
   opacity: 1;
 }
 
@@ -22628,6 +22640,17 @@ hr.horizontal.gray-light {
   border-radius: 0.1rem;
 }
 
+.buttonclosemodal {
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 1px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .border-radius-sm {
   border-radius: 0.125rem;
 }
@@ -22637,7 +22660,7 @@ hr.horizontal.gray-light {
 }
 
 .border-radius-lg {
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .border-radius-xl {

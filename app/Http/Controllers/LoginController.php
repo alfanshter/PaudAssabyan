@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JadwalKegiatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,7 +10,8 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('auth.login');
+        $jadwal_kegiatan = JadwalKegiatan::all();
+        return view('auth.login',['jadwal'=>$jadwal_kegiatan]);
     }
 
     public function authenticate(Request $request)

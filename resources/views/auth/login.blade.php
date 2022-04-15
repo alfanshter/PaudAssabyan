@@ -69,30 +69,21 @@
                             </tr>
                         </thead>
                         <tbody>
+                          @foreach ($jadwal as $item)
                             <tr>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">10.00</h6>
-                                </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">- Bernyanyi</p>
-                            </td>
+                              <td>
+                                  <div class="d-flex px-2 py-1">
+                                  <div class="d-flex flex-column justify-content-center">
+                                      <h6 class="mb-0 text-sm">{{$item->jadwal}}</h6>
+                                  </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <p class="text-xs font-weight-bold mb-0">{{$item->kegiatan}}</p>
+                              </td>
                             </tr>
-                            <tr>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">11.00</h6>
-                                </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="text-xs font-weight-bold mb-0">- Senam</p>
-                            </td>
-                            </tr>
+                          @endforeach
+
                         </tbody>
                         </table>
                     </div>

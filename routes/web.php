@@ -6,11 +6,13 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\JadwalkegiatanController;
 use App\Http\Controllers\KegiatanLuarPaudController;
+use App\Http\Controllers\KeuanganSiswaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\VisiMisiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,18 +80,24 @@ Route::post('/guru', [GuruController::class,'store'])->middleware('auth');
 Route::post('/guru/update', [GuruController::class,'update'])->middleware('auth');
 Route::post('/guru/delete', [GuruController::class,'delete'])->middleware('auth');
 
+//VisiMisi
+Route::get('/visimisi', [VisiMisiController::class,'index'])->middleware('auth');
+Route::post('/visimisi', [VisiMisiController::class,'store'])->middleware('auth');
+
+//VisiMisi
+Route::get('/keuangansiswa', [KeuanganSiswaController::class,'index'])->middleware('auth');
+
+//Nilai
+Route::get('/nilaisiswa', [NilaiController::class,'index'])->middleware('auth');
+Route::post('/nilaisiswa', [NilaiController::class,'store'])->middleware('auth');
+Route::post('/nilaisiswa/update', [NilaiController::class,'update'])->middleware('auth');
+Route::get('/nilaisiswa/hapus/{id}', [NilaiController::class,'delete'])->middleware('auth');
+
 
 Route::get('/dash', function () {
     return view('dash');
 });
 
-Route::get('/visimisi', function () {
-    return view('visimisi');
-});
-
-Route::get('/nilaisiswa', function () {
-    return view('nilaisiswa');
-});
 
 Route::get('/absensi', function () {
     return view('absensi');

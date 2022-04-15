@@ -5,15 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Nilai extends Model
+class VisiMisi extends Model
 {
     use HasFactory;
     protected $guarded = [
         'id'
     ];
-
-    public function biodata()
-    {
-        return $this->belongsTo(BiodataSiswa::class,'biodata_siswa_id','id');
-    }
 }
